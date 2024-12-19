@@ -1,0 +1,118 @@
+/* General body styling */
+body {
+  font-family: 'Roboto', sans-serif; /* Set the font to Roboto */
+}
+
+/* Animation effect for hover */
+.hover-animate:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  transition: transform 0.3s; /* Smooth transition effect */
+}
+
+/* Center container with maximum width */
+.container {
+  max-width: 900px; /* Set the maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Gradient background for the body */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #3b82f6, #9333ea); /* Blue to purple gradient */
+}
+
+/* Text color for white text */
+.text-white {
+  color: white; /* White text color */
+}
+
+/* Text color for dark gray text */
+.text-gray-800 {
+  color: #2d3748; /* Dark gray color */
+}
+
+/* Center-align text */
+.text-center {
+  text-align: center; /* Align text to the center */
+}
+
+/* Utility class for full width */
+.w-full {
+  width: 100%; /* Full width */
+}
+
+/* Padding utilities */
+.p-2 {
+  padding: 0.5rem; /* Small padding */
+}
+
+.p-4 {
+  padding: 1rem; /* Medium padding */
+}
+
+.p-6 {
+  padding: 1.5rem; /* Large padding */
+}
+
+/* Margin utilities */
+.mb-4 {
+  margin-bottom: 1rem; /* Bottom margin of 1rem */
+}
+
+.mt-4 {
+  margin-top: 1rem; /* Top margin of 1rem */
+}
+
+.mt-6 {
+  margin-top: 1.5rem; /* Top margin of 1.5rem */
+}
+
+/* Background color for white sections */
+.bg-white {
+  background-color: white; /* White background color */
+}
+
+/* Shadow for elements */
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Rounded corners for elements */
+.rounded-lg {
+  border-radius: 0.5rem; /* Rounded corners with 0.5rem radius */
+}
+
+/* List styling with disc bullets */
+.list-disc {
+  list-style-type: disc; /* Set list style to disc */
+}
+
+/* Padding-left for nested lists */
+.pl-5 {
+  padding-left: 1.25rem; /* Add padding to the left */
+}
+
+/* Font weight for bold text */
+.font-bold {
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Font size utilities for various text sizes */
+.text-xl {
+  font-size: 1.25rem; /* Extra-large text */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 2x larger text */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 4x larger text */
+}
+
+/* Styling for barcode output images */
+#barcodeOutput img {
+  min-width: 150px; /* Minimum width for barcode image */
+  max-width: 300px; /* Maximum width for barcode image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+}

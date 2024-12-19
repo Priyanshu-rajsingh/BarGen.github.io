@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarGen</title>
+    <!-- External CSS for custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Tailwind CSS for utility-based styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for using Roboto font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <!-- Font Awesome for adding icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gradient-to-r from-blue-400 to-purple-500 text-white">
+    <!-- Top-right link to BarGen Scanner -->
+    <div class="absolute top-4 right-4">
+      <a
+        href="BarGen Scanner/index.html"
+        class="text-lg font-semibold text-white hover:text-gray-200"
+      >
+        BarGen Scanner
+      </a>
+    </div>
+
+    <!-- Main container -->
+    <div class="container mx-auto p-4">
+      <!-- Header -->
+      <h1 class="text-4xl font-bold text-center mb-6">BarGen</h1>
+
+      <!-- Barcode Generator Section -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
+        <!-- Textarea for user input -->
+        <textarea
+          id="dataInput"
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+          placeholder="Enter data here..."
+        ></textarea>
+
+        <!-- Dropdown for selecting barcode type -->
+        <select
+          id="barcodeType"
+          class="w-full p-2 border border-gray-300 rounded mb-4"
+        >
+          <!-- Default option -->
+          <option value="Choose Symbology">Choose Symbology</option>
+          <!-- Various barcode symbologies -->
+          <option value="UPC">UPC</option>
+          <option value="EAN">EAN</option>
+          <option value="Code 128">Code 128</option>
+          <option value="Code 39">Code 39</option>
+          <option value="QR Code">QR Code</option>
+          <option value="Data Matrix">Data Matrix</option>
+          <option value="PDF417">PDF417</option>
+          <option value="Aztec Code">Aztec Code</option>
+          <option value="MaxiCode">MaxiCode</option>
+          <option value="Code 93">Code 93</option>
+          <option value="Code 11">Code 11</option>
+        </select>
+
+        <!-- Button to generate the barcode -->
+        <button
+          id="generateButton"
+          class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 hover-animate"
+        >
+          Generate Symbology
+        </button>
+
+        <!-- Div where the generated barcode will be displayed -->
+        <div
+          id="barcodeOutput"
+          class="text-center mt-6 flex justify-center"
+        ></div>
+      </div>
+
+      <!-- Section for Symbologies Details -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 mt-6">
+        <h2 class="text-2xl font-bold mb-4">Symbologies Details</h2>
+        <ul class="list-disc pl-5">
+          <!-- Detailed description of each symbology -->
+          <li>
+            <strong>UPC (Universal Product Code)</strong>: Primarily used in
+            retail for tracking products in stores. Requires a 12-digit numeric
+            input.
+          </li>
+          <li>
+            <strong>EAN (European Article Number)</strong>: Similar to UPC, but
+            used internationally, especially in Europe. Usually 13 digits
+            (EAN-13) or 8 digits (EAN-8).
+          </li>
+          <li>
+            <strong>Code 128</strong>: Used in shipping and packaging, as well
+            as for inventory management. Can encode alphanumeric characters.
+          </li>
+          <li>
+            <strong>Code 39</strong>: Commonly used in non-retail environments,
+            such as inventory and tracking. Can encode uppercase letters,
+            numbers, and a few special characters.
+          </li>
+          <li>
+            <strong>QR Code (Quick Response Code)</strong>: Widely used for
+            marketing, product tracking, and mobile payments. Can store a large
+            amount of data.
+          </li>
+          <li>
+            <strong>Data Matrix</strong>: Used in small item labeling, such as
+            electronics and pharmaceuticals. Suitable for small spaces due to
+            its compact size.
+          </li>
+          <li>
+            <strong>PDF417</strong>: Used for identification cards, transport,
+            and inventory management. Can encode large amounts of data.
+          </li>
+          <li>
+            <strong>Aztec Code</strong>: Commonly used in transport tickets and
+            mobile applications. Compact and can be read from any angle.
+          </li>
+          <li>
+            <strong>MaxiCode</strong>: Used primarily in shipping and logistics.
+            Designed for high-speed scanning.
+          </li>
+          <li>
+            <strong>Code 93</strong>: Used in various industries for inventory
+            and tracking. More compact than Code 39.
+          </li>
+          <li>
+            <strong>Code 11</strong>: Used for labeling and tracking in
+            telecommunications and inventory. Numeric-only input.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section for About BarGen -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 mt-6">
+        <h2 class="text-2xl font-bold mb-4">About BarGen</h2>
+        <p>
+          Welcome to BarGen, your go-to online tool for generating a wide
+          variety of barcodes and QR codes effortlessly! Whether you're a
+          business owner looking to streamline your inventory management, a
+          retailer needing product labels, or simply someone interested in
+          creating custom barcodes for personal use, BarGen is here to help.
+        </p>
+        <h3 class="text-xl font-bold mt-4">Our Mission</h3>
+        <p>
+          At BarGen, our mission is to simplify the process of barcode
+          generation. We understand the importance of accurate and efficient
+          labeling in today’s fast-paced world. Our user-friendly interface
+          allows you to quickly input your data, select from a range of barcode
+          symbologies, and generate high-quality barcode images in just a few
+          clicks.
+        </p>
+        <!-- List of features -->
+        <h3 class="text-xl font-bold mt-4">What We Offer</h3>
+        <ul class="list-disc pl-5">
+          <li>
+            <strong>Diverse Symbologies</strong>: Choose from a variety...
+          </li>
+          <li>
+            <strong>User-Friendly Interface</strong>: Our intuitive design...
+          </li>
+          <li><strong>Instant Results</strong>: Get your barcode images...</li>
+        </ul>
+        <!-- Additional information -->
+        <h3 class="text-xl font-bold mt-4">Why Choose BarGen?</h3>
+        <ul class="list-disc pl-5">
+          <li><strong>Accessibility</strong>: BarGen is accessible...</li>
+          <li>
+            <strong>Quality Assurance</strong>: Reliable barcode technology...
+          </li>
+          <li><strong>Continuous Improvement</strong>: We are committed...</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div
+      class="bg-white p-6 rounded-lg shadow-lg text-gray-800 mt-6 text-center"
+    >
+      <!-- Thank-you note -->
+      <p class="text-lg font-semibold">
+        Thanks For Using BarGen. It's made with Love
+        <span class="text-red-500 font-bold">&hearts;</span> in India
+        <span class="text-green-500 font-bold">&#127470;&#127475;</span>
+      </p>
+      <!-- Developer connection links -->
+      <p class="text-lg font-semibold mt-2">
+        Connect Developer on
+        <a
+          href="https://github.com"
+          target="_blank"
+          class="text-blue-500 hover:underline"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          class="text-blue-700 hover:underline"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </p>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

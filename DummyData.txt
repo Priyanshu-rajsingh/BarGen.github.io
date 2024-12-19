@@ -1,0 +1,13 @@
+Summary of Dummy Data
+Symbology	          Dummy Data	  Description
+UPC	                012345678912	A standard UPC code for a product.
+EAN	                4006381333931	A standard EAN-13 code for a product.
+Code 128	          Code128Test123	An alphanumeric string for Code 128.
+Code 39	            CODE39TEST	  A string for Code 39.
+QR Code	            https://www.example.com	A URL for QR code.
+Data Matrix	        DataMatrixTest123	    An alphanumeric string for Data Matrix.
+PDF417	            PDF417TestData1234567890	A longer alphanumeric string for PDF417.
+Aztec Code	        AztecCodeExample	A simple string for Aztec code.
+MaxiCode	          MaxiCodeTest123	  A string for MaxiCode.
+Code 93	            CODE93TEST	      A string for Code 93.
+Code 11	            123456	          A numeric-only string for Code 11.

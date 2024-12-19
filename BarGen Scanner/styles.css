@@ -1,0 +1,13 @@
+/* Set the default font for the entire page to 'Roboto', with a fallback to sans-serif */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add a hover animation effect that increases the size of the element when hovered */
+.hover-animate:hover {
+  /* Scale the element by 1.05 times when it is hovered */
+  transform: scale(1.05);
+
+  /* Ensure the scaling effect happens smoothly over 0.3 seconds */
+  transition: transform 0.3s;
+}
